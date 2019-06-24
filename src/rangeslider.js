@@ -304,6 +304,9 @@
         this.grabPos            = this.handleDimension / 2;
         this.position           = this.getPositionFromValue(this.value);
 
+        if (this.maxHandlePos <= 0)
+            return;
+        
         // Consider disabled state
         if (this.$element[0].disabled) {
             this.$range.addClass(this.options.disabledClass);
